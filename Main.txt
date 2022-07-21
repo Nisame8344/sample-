@@ -1,0 +1,9 @@
+const route=require('./Router')
+const express=require('express')
+const bodyParser=require('body-parser')
+const Products=express()
+Products.use(bodyParser.json())
+Products.use('/',route)
+Products.listen(2408,'localhost',()=>{
+    console.log("successfully Connected")
+})
